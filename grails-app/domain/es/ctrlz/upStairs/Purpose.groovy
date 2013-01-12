@@ -1,6 +1,6 @@
 package es.ctrlz.upStairs
 
-class Proposal {
+class Purpose {
 
     String name
     String description
@@ -8,6 +8,7 @@ class Proposal {
     boolean closed = false
 
     static belongsTo = [user: User]
+	static hasMany = [efforts: Effort]
 
     static constraints = {
     }

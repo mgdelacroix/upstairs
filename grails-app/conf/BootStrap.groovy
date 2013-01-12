@@ -3,8 +3,8 @@ import es.ctrlz.upStairs.*
 class BootStrap {
 
     def createUsers() {
-        def userRole = new Role(
-                authority: "USER_ROLE"
+        def roleUser = new Role(
+                authority: "ROLE_USER"
         ).save(failOnError: true)
 
         def user = new User(
@@ -13,7 +13,7 @@ class BootStrap {
                 enabled: true
         ).save(failOnError: true)
 
-        UserRole.create user, userRole, true
+        UserRole.create(user, roleUser, true)
     }
 
     def init = { servletContext ->
