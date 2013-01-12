@@ -11,7 +11,7 @@ class User {
 	boolean accountLocked
 	boolean passwordExpired
 
-    static hasMany = [proposals: Proposal]
+    static hasMany = [purposes: Purpose, comments: Comment]
 
 	static constraints = {
 		username blank: false, unique: true
