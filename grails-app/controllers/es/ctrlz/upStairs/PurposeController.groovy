@@ -4,6 +4,8 @@ class PurposeController {
 
     def index() { }
 
-	def newe() {
+	def create() { }
+
+	def save() {
 	}
 }
