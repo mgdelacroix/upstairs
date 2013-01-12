@@ -11,5 +11,7 @@ class Purpose {
 	static hasMany = [efforts: Effort]
 
     static constraints = {
+		name unique: true, blank: false
+		closed nullable: false
     }
 }
