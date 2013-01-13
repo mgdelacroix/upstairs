@@ -37,10 +37,10 @@ class PurposeController {
 	}
 
 	def show() {
-		// No contempla owners
 		def purpose = Purpose.get(params.id)
 		if (purpose) {
-			[purpose: purpose]
+			def currentUser = springSecurityService.currentUser
+			[purpose: purpose, currentUser: currentUser]
 		} else {
 			flash.message = message code: 'purpose.message.notFound'
 			flash.type = 'error'
