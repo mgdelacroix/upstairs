@@ -5,7 +5,6 @@ import grails.plugins.springsecurity.Secured
 class PurposeController {
 
 	def springSecurityService
-	def purposeService
 
     def index() {
 		[purposeList: springSecurityService.currentUser.purposes]
