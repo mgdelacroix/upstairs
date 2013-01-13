@@ -12,8 +12,15 @@ class BootStrap {
                 password: "test",
                 enabled: true
         ).save(failOnError: true)
-
         UserRole.create(user, roleUser, true)
+
+		user = new User(
+                username: "test2",
+                password: "test2",
+                enabled: true
+        ).save(failOnError: true)
+        UserRole.create(user, roleUser, true)
+
     }
 
     def init = { servletContext ->
