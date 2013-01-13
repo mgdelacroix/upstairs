@@ -21,7 +21,9 @@ class PurposeController {
 				purpose.user = springSecurityService.currentUser
 				purpose.save(failOnError: true)
 				flash.message = message code: 'purpose.message.success'
+				log.info "Purpose ${purpose.name} created by ${purpose.user.username}"
 			} catch (Exception e) {
+				log.error e
 				tx.setRollbackOnly()
 				flash.message = message code: 'purpose.message.error'
 				flash.type = 'error'
@@ -29,7 +31,7 @@ class PurposeController {
 		}
 
 		if (flash.type == 'error') {
-			render view: 'index'
+			redirect action: 'index'
 		} else {
 			redirect action: 'show', id: purpose.id
 		}
