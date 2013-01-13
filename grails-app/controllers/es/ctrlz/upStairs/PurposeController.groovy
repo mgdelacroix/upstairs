@@ -7,7 +7,11 @@ class PurposeController {
 	def springSecurityService
 
     def index() {
-		[purposeList: springSecurityService.currentUser.purposes]
+		def purposeList = Purpose.withCriteria {
+			eq("user", springSecurityService.currentUser)
+			order("dateCreated", "asc")
+		}
+		[purposeList: purposeList]
 	}
 
 	def create() { }
@@ -40,7 +44,11 @@ class PurposeController {
 		def purpose = Purpose.get(params.id)
 		if (purpose) {
 			def currentUser = springSecurityService.currentUser
-			[purpose: purpose, currentUser: currentUser]
+			def effortList = Effort.withCriteria {
+				eq("purpose", purpose)
+				order("date", "asc")
+			}
+			[purpose: purpose, effortList: effortList, currentUser: currentUser]
 		} else {
 			flash.message = message code: 'purpose.message.notFound'
 			flash.type = 'error'

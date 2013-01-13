@@ -10,7 +10,7 @@
 
 		<p>${purpose.description}</p>
 
-		<g:if test="${purpose.efforts}">
+		<g:if test="${effortList}">
 
 			<h2>Efforts</h2>
 
