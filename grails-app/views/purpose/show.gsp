@@ -14,8 +14,8 @@
 
 			<h2>Efforts</h2>
 
-			<g:each in="${purpose.efforts}" var="effort">
-				<p><strong><a href="${createLink(controller: 'effort', action: 'show', id: effort.id)}"><g:formatDate format="dd-MM-yyyy" date="${effort.dateCreated}" /></strong></a></p>
+			<g:each in="${effortList}" var="effort">
+				<p><strong><a href="${createLink(controller: 'effort', action: 'show', id: effort.id)}"><g:formatDate format="dd-MM-yyyy" date="${effort.date}" /></strong></a></p>
 				<p>${effort.description}</p>
 			</g:each>
 
@@ -26,7 +26,7 @@
 	
 			<g:form name="effortCreateForm" controller="effort" action="save">
 				<g:hiddenField name="purposeId" value="${purpose.id}" />
-				<label for="effort.dateCreated"><g:message code="effort.create.date" /></label><g:datePicker name="effort.dateCreated" value="${new Date()}" precision="day" /><br />
+				<label for="effort.date"><g:message code="effort.create.date" /></label><g:datePicker name="effort.date" value="${new Date()}" precision="day" /><br />
 				<label for="effort.description"><g:message code="effort.create.description" /></label><br />
 				<g:textArea name="effort.description" /><br />
 				<g:submitButton name="submit" value="${message(code: 'effort.create.submit')}" />

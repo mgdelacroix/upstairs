@@ -2,14 +2,14 @@ package es.ctrlz.upStairs
 
 class Effort {
 
-	Date dateCreated
+	Date date
 	String description
     static belongsTo = [purpose: Purpose]
     static hasMany = [comments: Comment]
     //Measure (si podemos medir en alguna unidad el esfuerzo)
 
     static constraints = {
-		dateCreated nullable: false
+		date nullable: false
 		description nullable: false
     }
 }
