@@ -10,6 +10,6 @@ class Effort {
 
     static constraints = {
 		date nullable: false
-		description nullable: false
+		description blank: false
     }
 }
