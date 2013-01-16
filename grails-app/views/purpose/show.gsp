@@ -4,7 +4,7 @@
 	</head>
 
 	<body>
-		<h1>Show purpose</h1>
+		<h1><g:message code="purpose.show.title" /></h1>
 
 		<p>${purpose.name}</p>
 
@@ -12,7 +12,7 @@
 
 		<g:if test="${effortList}">
 
-			<h2>Efforts</h2>
+			<h2><g:message code="purpose.show.efforts" /></h2>
 
 			<g:each in="${effortList}" var="effort">
 				<p><strong><a href="${createLink(controller: 'effort', action: 'show', id: effort.id)}"><g:formatDate format="dd-MM-yyyy" date="${effort.date}" /></strong></a></p>
@@ -22,7 +22,7 @@
 		</g:if>
 
 		<g:if test="${currentUser == purpose.user}">
-			<h3>Register effort</h3>
+			<h3><g:message code="purpose.show.newEffort" /></h3>
 	
 			<g:form name="effortCreateForm" controller="effort" action="save">
 				<g:hiddenField name="purposeId" value="${purpose.id}" />

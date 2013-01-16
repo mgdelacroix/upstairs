@@ -4,7 +4,7 @@
 	</head>
 
 	<body>
-		<h1>Create Purpose</h1>
+		<h1><g:message code="purpose.create.title" /></h1>
 		
 		<g:form name="purposeCreateForm" action="save">
 			<label for="purpose.name"><g:message code="purpose.create.name" /></label><br />

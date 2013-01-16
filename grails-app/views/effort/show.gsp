@@ -6,7 +6,7 @@
 
 	<body>
 
-		<h1>Show Effort</h1>
+		<h1><g:message code="effort.show.title" /></h1>
 
 		<p><strong><g:formatDate format="dd-MM-yyyy" date="${effort.date}" /></strong></p>
 
@@ -20,7 +20,7 @@
 			</g:each>
 		</g:if>
 
-		<h3>Write a comment</h3>
+		<h3><g:message code="effort.show.newComment" /></h3>
 
 		<g:form name="commentCreateForm" controller="comment" action="save">
 			<g:hiddenField name="effortId" value="${effort.id}" />
