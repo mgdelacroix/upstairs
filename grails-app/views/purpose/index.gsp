@@ -1,6 +1,8 @@
 <html>
 
 	<head>
+		<title><g:message code="purpose.index.title" /></title>
+		<meta name="layout" content="main" />
 	</head>
 
 	<body>

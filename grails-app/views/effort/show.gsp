@@ -1,7 +1,8 @@
 <html>
 
 	<head>
-
+		<title><g:message code="effort.show.title" /></title>
+		<meta name="layout" content="main" />
 	</head>
 
 	<body>
