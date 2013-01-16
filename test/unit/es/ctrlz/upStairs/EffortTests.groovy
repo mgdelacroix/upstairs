@@ -13,7 +13,6 @@ import org.junit.*
 class EffortTests {
 
     void testConstraints() {
-		// Crear el propósito es necesario? Si es así, el usuario no?
 		def purpose = new Purpose(
 			name: 'Test purpose',
 			description: 'Description'
@@ -42,4 +41,5 @@ class EffortTests {
 		effort.description = null
 		assert !effort.validate()
     }
+
 }
