@@ -26,7 +26,10 @@
 		<g:if test="${currentUser == purpose.user}">
 			<h3><g:message code="purpose.show.newEffort" /></h3>
 	
-			<g:render template="/forms/effort" />
+			<g:form name="effortForm" controller="effort" action="save">
+				<g:render template="/forms/effort" />
+				<g:submitButton name="submit" value="${message(code: 'effort.create.submit')}" />
+			</g:form>
 
 		</g:if>
 

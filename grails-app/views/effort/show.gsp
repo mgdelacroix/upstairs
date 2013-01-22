@@ -23,7 +23,10 @@
 
 		<h3><g:message code="effort.show.newComment" /></h3>
 
-		<g:render template="/forms/comment" />
+		<g:form name="commentForm" controller="comment" action="save">
+			<g:render template="/forms/comment" />
+			<g:submitButton name="submit" value="${message(code: 'comment.create.submit')}" />
+		</g:form>
 
 	</body>
 
