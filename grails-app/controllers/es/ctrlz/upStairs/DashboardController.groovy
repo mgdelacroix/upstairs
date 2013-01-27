@@ -4,7 +4,5 @@ import grails.plugins.springsecurity.Secured
 @Secured(['ROLE_USER'])
 class DashboardController {
 
-    def index() {
-		render 'Dashboard Controller'
-	}
+    def index() { }
 }

@@ -1,0 +1,122 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #eaeaea;
+	font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+	color: #000000;
+	font-size; 12px;
+}
+
+#main {
+	position: relative;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#column-left {
+	position: fixed; 
+	width: 85px;
+	height: 100%;
+	background: url('../images/bg_column_left.jpg') repeat-y;
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	left: 0px;
+}
+
+#column-right {
+	float: left;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#header {
+	float: left;
+	width: 100%;
+	height: 82px;
+	background: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+}
+
+.title-header {
+	float: left;
+	height: 70px;
+	width: 335px;
+	margin: 0px 0px 0px 85px;
+	padding: 10px 0px 0px 0px;
+	font-family: 'Quando', serif;
+	color: #e1dede;
+	font-size: 50px;
+	text-align: center;
+}
+
+
+#main-logo {
+	float: right;
+	width: 313px;
+	height: 80px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#main-logo ul {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	list-style:none;
+}
+
+#main-logo ul li a {
+	float: left;
+	width: 313px;
+	height: 80px;
+	margin: 0px;
+	padding: 0px;
+	overflow:hidden;
+	text-indent:-1000em;
+	cursor:pointer;
+}
+
+#main-logo ul li a.page01 {background: url('../images/sprite.png') -170px 0px no-repeat;}
+#main-logo ul li a.page01:hover {background: url('../images/sprite.png') -170px -83px no-repeat;}
+
+
+.menu {
+	float: left; 
+	width: 85px;
+	height: 332px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.menu ul {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	list-style:none;
+}
+
+.menu ul li a {
+	float: left;
+	width: 85px;
+	height: 82px;
+	margin: 0px;
+	padding: 0px;
+	overflow:hidden;
+	text-indent:-1000em;
+	cursor:pointer;
+}
+
+.menu ul li a.page01 {background: url('../images/sprite.png') -85px 0px no-repeat;}
+.menu ul li a.page02 {background: url('../images/sprite.png') -85px -82px no-repeat;}
+.menu ul li a.page03 {background: url('../images/sprite.png') -85px -164px no-repeat;}
+.menu ul li a.page04 {background: url('../images/sprite.png') -85px -246px no-repeat; height: 86px;}
+
+.menu ul li a.page01:hover {background: url('../images/sprite.png') 0px 0px no-repeat;}
+.menu ul li a.page02:hover {background: url('../images/sprite.png') 0px -82px no-repeat;}
+.menu ul li a.page03:hover {background: url('../images/sprite.png') 0px -164px no-repeat;}
+.menu ul li a.page04:hover {background: url('../images/sprite.png') 0px -246px no-repeat;}
