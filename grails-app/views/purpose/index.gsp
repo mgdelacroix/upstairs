@@ -6,8 +6,6 @@
 	</head>
 
 	<body>
-		<h1><g:message code="purpose.index.title" /></h1>
-
 		<g:each in="${purposeList}" var="purpose">
 			<p><a href="${createLink(action: 'show', id: purpose.id)}"><strong>${purpose.name}</strong></a></p>
 		</g:each>

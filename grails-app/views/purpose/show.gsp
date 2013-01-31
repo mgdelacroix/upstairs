@@ -6,9 +6,7 @@
 	</head>
 
 	<body>
-		<h1><g:message code="purpose.show.title" /></h1>
-
-		<p>${purpose.name}</p>
+		<h1>${purpose.name}</h1>
 
 		<p>${purpose.description}</p>
 

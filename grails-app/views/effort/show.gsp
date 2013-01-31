@@ -6,9 +6,6 @@
 	</head>
 
 	<body>
-
-		<h1><g:message code="effort.show.title" /></h1>
-
 		<p><strong><g:formatDate format="dd-MM-yyyy" date="${effort.date}" /></strong></p>
 
 		<p>${effort.description}</p>
